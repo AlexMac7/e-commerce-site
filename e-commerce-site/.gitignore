@@ -5,6 +5,8 @@
 /vendor
 /.idea
 .idea
+../.idea/
+./.idea
 /.vagrant
 Homestead.json
 Homestead.yaml
