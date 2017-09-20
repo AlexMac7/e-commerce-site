@@ -17,7 +17,7 @@ class HomePageTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
-                    ->assertTitle('E-commerce-site');
+                    ->assertTitle('');
         });
     }
 }
