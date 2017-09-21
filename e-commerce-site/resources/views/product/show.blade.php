@@ -5,7 +5,7 @@
             <div class="agileinfo_single">
                 <h5>{!! $product->title !!}</h5>
                 <div class="col-md-4 agileinfo_single_left">
-                    <img id="example" src="{!! $product->image !!}" alt=" " class="img-responsive">
+                    <img id="example" src={{URL::asset('/images/' . $product->image)}} alt="" class="img-responsive">
                 </div>
 
                 <div class="w3agile_description">

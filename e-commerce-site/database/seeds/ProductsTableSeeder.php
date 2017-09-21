@@ -22,7 +22,7 @@ class ProductsTableSeeder extends Seeder
 
             DB::table( 'products' )->insert( [
                 'title'          => 'Product for ' . $category[0]->name,
-                'image'          => 'http://via.placeholder.com/600x400',
+                'image'          => rand(1, 5) . '.jpg',
                 'category_id'    => $category_id,
                 'original_price' => $actual_price,
                 'discount_price' => $discount_price,
