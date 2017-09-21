@@ -16,3 +16,4 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/','HomeController@index');
+Route::resource('product', 'ProductController');

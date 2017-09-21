@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class TopProductsTableSeeder extends Seeder
 {
@@ -9,8 +10,14 @@ class TopProductsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-        //
+    public function run() {
+        $product = DB::table( 'products' )->where( 'title', '=',
+            trim( strtolower( 'Product for branded foods' ) ) )->get();
+
+        $product_id = $product[0]->id;
+        DB::table( 'hot_products' )->insert( [
+            'product_id' => $product_id,
+            'created_at' => Carbon::now(),
+        ] );
     }
 }
